@@ -1,44 +1,25 @@
-import './home.css';
-import {BsMouse} from 'react-icons/bs';
-import img from '../props/rl-logo.png';
+import React from 'react'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 
-function Home(){
-	return(
-		<div id="home" className="container home-container">
-			<div className="logo">
-				<div className="main-img">
-					<span className="circle"></span>
-					<span className="circle"></span>
-					<span className="circle"></span>
-					<span className="circle"></span>
-					<span className="circle"></span>
-					<span className="circle"></span>
-					<span className="circle"></span>
-					<span className="circle"></span>
-				</div>
-				<img src={img} alt='' />
-			</div>
-			<a href='#footer' className='scroll-down'>
-				<hr />
-				<h5>scroll down</h5>
-				<BsMouse className='scroll'/>
-				<hr /> 
-			</a>
-
-			<h2>
-				<span>About Me</span> <br />
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis architecto unde repudiandae magni natus, sint cumque enim qui numquam sit officia exercitationem, ipsam corrupti eos quod dolore et, totam non?
-				</p>
-			</h2>
-		</div>
-	)
+const Home = () => {
+  return (
+	<div name="home" className='w-full h-screen bg-[#0a192f]'>
+		{/* Container */}
+    <div className='w-full mx-auto px-20 flex flex-col justify-center h-full'>
+      <p className='text-pink-600'>Hello, my name is</p>
+      <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>Rafael Gamarra</h1>
+      <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a freelancer Developer</h2>
+      <p className='text-[#8892b0] py-4 max-w-[700px]'>I'm a student, autodidact and freelancer developer, currently I'm focusing in become an full-stack developer</p>
+      <div>
+        <button className='text-white group border-2 px-6 py-3 flex items-center hover:bg-pink-600 hover:border-pink-600'>View Work 
+          <span className='group-hover:rotate-90 duration-300'>
+            <HiArrowNarrowRight className='ml-3'/>
+          </span>
+        </button>
+      </div>
+    </div>
+	</div>
+  )
 }
 
-const toggler = document.querySelectorAll('.main-img');
-console.log(toggler);
-/*toggler.addEventListener('click',() => {
-	toggler.classList.toggle('active');
-});*/
-
-export default Home;
+export default Home
