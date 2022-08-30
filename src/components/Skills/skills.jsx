@@ -12,7 +12,7 @@ const Skills = () => {
   return (
     <div name="skills" className="w-full h-screen bg-[#0a192f] text-gray-300">
 			{/* CONTAINER */}
-			<div className='max-w-[1000px] p-4 flex flex-col mx-[100px] w-full h-full md:mx-auto content-center'>
+			<div className='max-w-[1000px] p-4 flex flex-col w-full h-full md:mx-[auto] md:px-[100px]'>
 				<div>
 					<p className='text-4xl font-bold inline border-b-4 border-pink-600'>Experience</p>
 					<p className='py-4'>// these are the tecnologies I've worked with</p>
@@ -54,7 +54,6 @@ const Skills = () => {
 				</div>
 			</div>
 		</div>
-
   )
 }
 
